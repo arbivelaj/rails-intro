@@ -1,0 +1,16 @@
+<h1>hello from your first rails page</h1>
+
+
+<h2>Meet our team</h2>
+<ol>
+  <% @members.each do |member| %>
+    <li><%= member.capitalize %></li>
+  <% end %>
+</ol>
+
+<%= link_to "go to contacts", contacts_path %>
+
+<form action="/about" method="get">
+  <input type="text" name="member" placeholder="Who are you looking for?" value="<%= params[:member] %>">
+  <input type="submit">
+</form>

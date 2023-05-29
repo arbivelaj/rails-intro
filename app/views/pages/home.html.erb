@@ -1,0 +1,21 @@
+<h1>this is the homepage</h1>
+<p>
+<%= @team %>
+</p>
+<p>
+<% @team %>
+</p>
+
+<ul>
+  <% @cities.each do |city| %>
+    <li><%= city %></li>
+  <% end %>
+</ul>
+
+<p>Now is <%= Time.now %></p>
+
+<form action="/contacts" method="get">
+  <input type="text" name="member" placeholder="Who are you looking for?" value="<%= params[:member] %>">
+  <input type="text" name="member_name" placeholder="Who are you looking for?" value="<%= params[:member_name] %>">
+  <input type="submit">
+</form>
