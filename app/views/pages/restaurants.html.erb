@@ -1,0 +1,21 @@
+<h1>here's my list of restaurants</h1>
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <li><%= restaurant %></li>
+  <% end %>
+</ul>
+
+
+<form action="/restaurants" method="get">
+  <input type="text" name="restaurant" placeholder="Who are you looking for?">
+  <input type="submit">
+</form>
+
+<form action="/restaurants" method="post">
+  <input type="text" name="restaurant" placeholder="Who are you looking for?">
+  <input type="submit">
+</form>
+
+
+<a href="/restaurants?restaurant=t">restaurants that start with "T"</a>
